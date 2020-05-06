@@ -9,8 +9,6 @@ import { UserDto } from './dto/user.dto';
 
 @Injectable()
 export class UsersService {
-    private readonly users: User[];
-
     constructor(
         @InjectModel('User') private model: Model<UserModel>,
         private logger: MyLogger
