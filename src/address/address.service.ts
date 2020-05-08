@@ -33,7 +33,8 @@ export class AddressService {
         if (query === null)
             query = { name: `${dto.name}` };
         this.logger.log('Updating address: ' + query);
-        return this.model.findOneAndUpdate(query, dto);
+        const entity = new Address(dto);
+        return this.model.findOneAndUpdate(query, entity);
     }
 
     async remove(query) {

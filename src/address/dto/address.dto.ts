@@ -8,4 +8,7 @@ export class AddressDto {
     @IsNotEmpty()
     @IsIP()
     address: string;
+
+    @IsNotEmpty()
+    user: string;
 }
